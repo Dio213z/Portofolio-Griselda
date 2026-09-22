@@ -1,0 +1,6 @@
+Letakkan foto prestasi/sertifikat asli di folder ini:
+prestasi1.png
+prestasi2.jpg
+prestasi3.jpeg
+Tanpa build: nomor harus berurutan mulai 1.
+Dengan build Vercel: semua nomor valid terbaca, boleh ada nomor terlewat.
