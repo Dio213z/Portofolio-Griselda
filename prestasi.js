@@ -30,7 +30,7 @@
     button.type = "button";
     button.className = "achievement-open";
     button.setAttribute("aria-label", "Pratinjau " + title);
-    image.alt = "Dokumentasi " + title + " — Gita Lidia Oktavia";
+    image.alt = "Dokumentasi " + title + " — Griselda Helga Dana";
     image.decoding = "async";
     const frame = document.createElement("div");
     frame.className = "achievement-image";

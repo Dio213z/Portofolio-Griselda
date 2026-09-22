@@ -15,16 +15,16 @@ document.addEventListener("keydown", event => { if(event.key === "Escape" && nav
 function applyTheme(theme){
   const light = theme !== "dark";
   document.body.dataset.theme = light ? "light" : "dark";
-  themeButton.setAttribute("aria-pressed", String(!light));
-  themeButton.textContent = light ? "☾ Dark mode" : "☀ Light mode";
+  themeButton.setAttribute("aria-pressed", String(light));
+  themeButton.textContent = light ? "☾ Malam" : "☀ Pagi";
   themeButton.setAttribute("aria-label", "Pilih tampilan " + (light ? "gelap" : "terang"));
-  document.querySelector('meta[name="theme-color"]').content = light ? "#edf4ff" : "#0b1530";
+  document.querySelector('meta[name="theme-color"]').content = light ? "#fffaf7" : "#202c28";
 }
-try { applyTheme(localStorage.getItem("gita-theme")); } catch { applyTheme("light"); }
+try { applyTheme(localStorage.getItem("griselda-theme")); } catch { applyTheme("light"); }
 themeButton.addEventListener("click", () => {
   const theme = document.body.dataset.theme !== "dark" ? "dark" : "light";
   applyTheme(theme);
-  try { localStorage.setItem("gita-theme", theme); } catch {}
+  try { localStorage.setItem("griselda-theme", theme); } catch {}
 });
 document.querySelector("#year").textContent = new Date().getFullYear();
 const contact = window.PORTFOLIO_CONTACT || {};
