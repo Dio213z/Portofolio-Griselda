@@ -1,39 +1,39 @@
-# Taman Kecil Griselda
-Portofolio HTML, CSS, JavaScript untuk Griselda Helga Dana — X RPL 3, absen 26, SMK Krian 1.
+# Gita Lidia Oktavia — Digital Space
+Portofolio HTML, CSS, JavaScript. Kelas X RPL 3, absen 23, SMK Krian 1.
 
-## Membuka website
-Ekstrak ZIP, buka `index.html`. Seluruh font, foto, dan dekorasi tersimpan lokal. Tidak memerlukan npm install untuk membuka halaman. Untuk deployment dengan galeri otomatis, gunakan build di bawah.
+## Jalankan
+Ekstrak ZIP lalu buka index.html. Font dan ilustrasi tersedia lokal, tanpa npm install. Galeri dapat dibangun dengan Node.js untuk deployment.
 
-## Foto profil dan latar
-Kedua foto asli dari pesanan sudah disertakan, tanpa perubahan wajah.
-- `assets/fotoprofil.jpg`: foto pertama, tampil dalam bingkai profil.
-- `assets/latar-griselda.jpg`: foto kedua, latar halaman utama dengan lapisan warna agar teks terbaca.
-- Buka `config.js`: `imageUrl` untuk foto profil, `backgroundUrl` untuk latar. Bisa menggunakan URL gambar HTTPS publik atau path lokal.
-- `objectPosition` dan `backgroundPosition` mengatur posisi pemotongan visual CSS, misalnya `center 35%`.
-- URL harus langsung menuju gambar, bukan halaman album/login. URL bermasalah akan memakai foto bawaan.
+## Konsep
+Panel kaca transparan, navigasi samping, latar biru bercahaya, susunan dashboard terinspirasi gambar referensi. Tema terang/gelap berlaku di kedua halaman dan pilihan disimpan di browser. Foto orang, kontak, hobi, proyek, serta nilai dalam gambar referensi tidak disalin sebagai fakta Gita.
+Kemampuan ditampilkan pada skala 5 bintang: HTML & CSS 3, JavaScript 4, Python 4, Java 3. Tidak diubah menjadi persentase.
 
-## Kontak
-Isi `PORTFOLIO_CONTACT.email` dan `PORTFOLIO_CONTACT.instagram` di `config.js`. Instagram ditulis username saja. Data kontak belum diberikan, sehingga ditampilkan sebagai “Belum dicantumkan”.
+## Foto profil & kontak
+Edit config.js:
+- PORTFOLIO_PROFILE.imageUrl: URL HTTPS langsung menuju gambar atau path seperti assets/fotoprofil.jpg.
+- imageAlt: deskripsi foto; objectPosition: posisi pemotongan visual, misalnya center top.
+- Jika kosong, website mencoba assets/fotoprofil.png, .jpg, .jpeg, lalu memakai inisial GL.
+- Foto pribadi belum diberikan; gambar referensi tidak digunakan sebagai foto Gita.
+- PORTFOLIO_CONTACT.email dan instagram: isi data asli. Instagram cukup username tanpa @. Kosong akan menampilkan Belum dicantumkan.
+
+## Tiga demo baru
+1. Spektrum Studio: pencampur RGB dan kode HEX, kanal 0–255, reset.
+2. Binary Bridge: konversi desimal 0–255 menjadi 8 bit, uraian nilai tempat, validasi input.
+3. Key Sprint: latihan mengetik tiga potongan kode, waktu mulai saat input pertama, WPM saat selesai, kecocokan teks saat ini. Kecocokan bukan akurasi historis penekanan tombol. Tempel teks dinonaktifkan; reset mengulang timer.
+Ketiganya dibuat untuk portofolio ini dan diberi label demo, bukan klaim proyek atau prestasi terdahulu.
 
 ## Galeri prestasi
-Masukkan file ke folder `asset` dengan nama `prestasi1.png`, `prestasi2.jpg`, `prestasi3.jpeg`, dan seterusnya.
-- Jika langsung membuka HTML tanpa build, gunakan nomor urut dari 1 tanpa celah. Pemindaian berhenti pada nomor pertama yang tidak ada.
-- Build memindai semua gambar sesuai pola nama, mendukung celah nomor, tanpa batas nomor tetap.
-- Jalankan `node scripts/build-prestasi.mjs` dari folder proyek. Hasil website ada di `dist`.
-- Foto profil tidak dimasukkan ke galeri prestasi. Belum ada sertifikat yang diberikan.
+Masukkan sertifikat/foto ke folder asset dengan nama prestasi1.png, prestasi2.jpg, prestasi3.jpeg, dst.
+Tanpa build: gunakan nomor urut dari 1; pencarian berhenti pada nomor pertama yang tidak ada.
+Dengan build: semua nomor yang sesuai pola nama akan ditemukan, boleh memiliki celah nomor.
+Build: node scripts/build-prestasi.mjs
+Hasil: dist, sudah berisi daftar galeri yang dibangkitkan otomatis.
 
-## GitHub dan Vercel
-1. Ekstrak ZIP, unggah isinya ke root repository GitHub. Pastikan index.html dan vercel.json ada di root, bukan ZIP-nya saja.
-2. Import repository tersebut di Vercel.
-3. Konfigurasi sudah ada di vercel.json: build `node scripts/build-prestasi.mjs`, output `dist`, tanpa framework.
-4. Deploy. Setelah menambahkan prestasi baru, commit dan deploy ulang agar daftar diperbarui.
-Untuk hosting statis lain, gunakan isi `dist` setelah build. Untuk GitHub Pages tanpa build, halaman tetap bisa memakai pemindaian gambar berurutan.
+## GitHub / Vercel
+Unggah isi hasil ekstrak ZIP ke root repository, termasuk index.html dan vercel.json. Import repo di Vercel. vercel.json sudah mengatur build node scripts/build-prestasi.mjs dan output dist, tanpa framework. Deploy ulang setelah menambahkan prestasi agar daftar diperbarui.
+Untuk hosting statis lain, unggah isi dist. GitHub Pages tanpa build tetap mendukung penomoran prestasi berurutan.
 
-## Isi & interaksi
-- Identitas, riwayat sekolah dan kemampuan 70% / 80% / 75% / 80% sesuai formulir.
-- Tiga demo baru: Rangkai Buket, Kelopak Kembar, Lily Kecilku. Demo dibuat untuk portofolio ini, bukan klaim proyek terdahulu atau penghargaan siswa.
-- Halaman prestasi, perbesar gambar, navigasi hamburger, tema pagi/malam, dan kembali ke atas.
-- Kelopak sakura jatuh, bunga lily bergoyang, kupu-kupu, animasi saat bagian halaman masuk layar dan hover kartu.
-- Tombol jeda animasi tersedia di kanan bawah. Pengaturan reduced motion sistem juga dihormati.
-- Judul memakai serif, isi memakai sans-serif lokal. Lisensi font disertakan di assets/fonts.
-- Ilustrasi lily dibuat sebagai SVG ringan. Tidak ada pelacak atau layanan formulir eksternal.
+## Animasi & aksesibilitas
+Orbit profil, cahaya latar, bintang, scan panel, animasi masuk saat scroll, hover kartu, dan ilustrasi demo. Semua dekorasi tidak menangkap klik. Tombol jeda menghentikan animasi CSS. Preferensi reduced motion perangkat dihormati. Menu HP, navigasi keyboard, label bintang untuk pembaca layar, serta dialog yang dapat ditutup dengan Escape disertakan.
+
+Tidak ada formulir kirim pesan palsu atau tombol CV tanpa file. Email & Instagram ditampilkan setelah diisi. Font lokal dan lisensi ada di assets/fonts.

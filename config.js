@@ -1,10 +1,5 @@
-// Pengaturan foto: boleh URL gambar HTTPS publik atau path file lokal.
-window.PORTFOLIO_PROFILE = {
- imageUrl: "assets/fotoprofil.jpg",
- imageAlt: "Foto Griselda Helga Dana",
- objectPosition: "center 35%",
- backgroundUrl: "assets/latar-griselda.jpg",
- backgroundPosition: "center 42%"
-};
-// Isi jika ingin menampilkan kontak asli. Jangan memakai data orang lain.
+// Foto profil: isi URL langsung menuju gambar, atau path seperti assets/fotoprofil.jpg.
+// Foto orang di referensi tidak dipakai sebagai identitas Gita.
+window.PORTFOLIO_PROFILE = { imageUrl: "", imageAlt: "Foto Gita Lidia Oktavia", objectPosition: "center" };
+// Kontak belum diberikan. Username Instagram tanpa @.
 window.PORTFOLIO_CONTACT = { email: "", instagram: "" };
